@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel test suite">
+
+	<test name="Chrome Test">
+		<parameter name="browser" value="chrome" />
+		<packages>
+			<package name="tests" />
+		</packages>
+	</test>
+
+	<test name="FireFox Test">
+		<parameter name="browser" value="FireFox" />
+		<packages>
+			<package name="tests" />
+		</packages>
+	</test>
+
+</suite>
