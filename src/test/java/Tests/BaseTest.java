@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -6,11 +6,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
-import Pages.AddEmpPage;
-import Pages.EmployeeList;
-import Pages.LeaveListPage;
-import Pages.LoginPage;
-import Utilities.ExtentManager;
+import pages.AddEmpPage;
+import pages.EmployeeList;
+import pages.LeaveListPage;
+import pages.LoginPage;
+import utilities.ExtentManager;
 
 
 public class BaseTest extends ExtentManager {

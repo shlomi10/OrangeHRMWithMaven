@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import java.awt.AWTException;
 import java.io.IOException;
@@ -8,6 +8,8 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 public class MainRunner extends BaseTest {
 		
 	String siteURL ="https://opensource-demo.orangehrmlive.com/index.php";
+	String firstName = "Donald";
+	String lastName = "Trump";
 	
 	@Test (priority = 1)
 	public void invalidLoginCredentialsTest() throws IOException, AWTException {
@@ -36,7 +38,7 @@ public class MainRunner extends BaseTest {
 	@Test (priority = 4)
 	public void addEmployee() {
 		create_test("create employee ", "create employee");
-		addEmpPage.addEmployee();
+		addEmpPage.addEmployee(firstName, lastName);
 	}
 	
 	@Test (priority = 5)

@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,8 +14,6 @@ public class AddEmpPage extends BasePage {
 	By firstNameElem = By.cssSelector("[id='firstName']");
 	By lastNameElem = By.cssSelector("[id='lastName']");
 	By saveButton = By.cssSelector("[id='btnSave']");
-	String firstName = "Donald";
-	String lastName = "Trump";
 	By loginDetailsCheckbox = By.cssSelector("[type='checkbox']");
 	By userNameField = By.cssSelector("[id='user_name']");
 	By passwordField = By.cssSelector("[id='user_password']");
@@ -32,7 +30,7 @@ public class AddEmpPage extends BasePage {
 	By welcomeElement = By.id("welcome");
 	By logOutLink = By.xpath("//a[.='Logout']");
 	
-	public void addEmployee() {
+	public void addEmployee(String firstName,String lastName) {
 		clickOnElement(addemployeeButton);
 		sendKeys(firstNameElem,firstName);
 		sendKeys(lastNameElem,lastName);

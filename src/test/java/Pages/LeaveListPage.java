@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import java.util.List;
 
@@ -13,6 +13,8 @@ public class LeaveListPage extends BasePage {
 	public LeaveListPage(WebDriver driver) {
 		super(driver);
 	}
+	
+	LoginPage log = new LoginPage(driver);
 	By userNameField = By.xpath("//input[@name='txtUsername']");
 	By passwordField = By.xpath("//input[@name='txtPassword']");
 	By loginButton = By.xpath("//input[@name='Submit']");
@@ -38,7 +40,7 @@ public class LeaveListPage extends BasePage {
 	int expectedRows = 3;
 
 	public void displayLeaveReport() {
-		loginWithcredentials(userNameField,passwordField,correctUserName,correctPassword,loginButton);
+		log.loginWithcredentials(userNameField,passwordField,log.correctUserName,log.correctPassword,loginButton);
 		clickOnElement(leaveListLink);
 
 		//first date picker

@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import java.util.List;
 import java.util.Random;
@@ -18,8 +18,6 @@ public class BasePage {
 	public Actions action1;
 	public Random ran;
 	public int randNum;
-	String correctUserName = "Admin";
-	String correctPassword = "admin123";
 
 	public BasePage(WebDriver driver) {
 		this.driver=driver;
@@ -52,12 +50,6 @@ public class BasePage {
 	
 	public void invisibilityOf(By elem) {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(elem));
-	}
-	
-	public void loginWithcredentials(By elemuser, By elemPass,String userName, String password,By elemclick) {
-		driver.findElement(elemuser).sendKeys(userName);
-		driver.findElement(elemPass).sendKeys(password);
-		driver.findElement(elemclick).click();
 	}
 	
 	public String subString(String sub, int beginIndex) {

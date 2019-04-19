@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,8 +18,8 @@ public class LoginPage extends BasePage {
 	By loginButton = By.xpath("//input[@name='Submit']");
 	By loggedInIndicator = By.xpath("//a[@class='panelTrigger']");
 	By errorMessege = By.cssSelector("[id='spanMessage']");
-	//String correctUserName = "Admin";
-	//String correctPassword = "admin123";
+	String correctUserName = "Admin";
+	String correctPassword = "admin123";
 	List<String> username = Arrays.asList("", "adminn");
 	List<String> password = Arrays.asList("", "test");
 			
@@ -40,5 +40,11 @@ public class LoginPage extends BasePage {
 
 	public void loginCredentialsTest() {
 		loginWithcredentials(userNameField,passwordField,correctUserName,correctPassword,loginButton);
+	}
+	
+	public void loginWithcredentials(By elemuser, By elemPass,String userName, String password,By elemclick) {
+		driver.findElement(elemuser).sendKeys(userName);
+		driver.findElement(elemPass).sendKeys(password);
+		driver.findElement(elemclick).click();
 	}
 }
